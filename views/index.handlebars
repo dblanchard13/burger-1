@@ -1,13 +1,25 @@
 <h1 class="header">Eat-Da-Burger</h1>
 
 	<div class="container">
-		
+
 		<div id="burger-pic">
-		<img src="../assets/img/burger.png" alt="eat-da-burger" height="150" width="150">
+		<img src="./assets/img/burger.png" alt="eat-da-burger" height="150" width="150">
 		</div>
 
+		<ul>
+			{{ #each burger }}
+				<li>
+					{{ this.id }} {{ this.burger_name }}
+				</li>
+			{{ /each }}
+		</ul>
+
 		<form id="burger-form">
-			<input type="text" name="burger-name">
+			<textarea rows="4" cols="50" form="burger-form"></textarea>
 		</form>
+
+		<button type="submit">Submit</button>
+
+		<p>Enter a burger you want to eat and then click the "Submit" button.</p>
 
 	</div>
